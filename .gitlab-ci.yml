@@ -1,0 +1,10 @@
+stages:
+  - test
+
+run_autotests:
+  image: openjdk
+  artifacts:
+    paths:
+      - build/reports/
+  script:
+    - ./gradlew test
